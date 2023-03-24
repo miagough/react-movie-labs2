@@ -35,13 +35,7 @@ const ratings = [
   },
   
 ];
-const [open, setOpen] = useState(false); 
-const navigate = useNavigate();
 
-const handleSnackClose = (event) => {
-    setOpen(false);
-    navigate("/movies/favorites");
-  };
 
 
 const styles = {
@@ -76,6 +70,13 @@ const ReviewForm = ({ movie }) => {
   const [open, setOpen] = useState(false); 
   const navigate = useNavigate();
   const context = useContext(MoviesContext);
+  
+  const handleSnackClose = (event) => {
+    setOpen(false);
+    navigate("/movies/favorites");
+  };
+
+  
 
 
   const defaultValues = {
